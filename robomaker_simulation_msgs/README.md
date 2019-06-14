@@ -2,11 +2,11 @@
 
 This package contains ROS service definitions for service endpoints provided inside of an AWS RoboMaker simulation.
 
-# Usage
+## Usage
 
-## AddTags
+### AddTags
 
-### Python
+#### Python
 
 ```
 import rospy
@@ -21,9 +21,9 @@ def add_tags(tags):
 
 ```
 
-## RemoveTag
+### RemoveTag
 
-### Python
+#### Python
 
 ```
 import rospy
@@ -38,9 +38,9 @@ def remove_tags(tags):
 
 ```
 
-## ListTags
+### ListTags
 
-### Python
+#### Python
 
 ```
 import rospy
@@ -58,8 +58,8 @@ def list_tags():
 
 ```
 
-## CancelSimulation
-### Python
+### CancelSimulation
+#### Python
 
 ```
 import rospy
@@ -72,3 +72,7 @@ def cancel_job():
         # Request cancel job failed
         print response.message
 ```
+
+## License
+
+This library is licensed under the Apache 2.0 License. 

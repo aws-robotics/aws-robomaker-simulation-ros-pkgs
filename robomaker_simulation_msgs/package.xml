@@ -5,7 +5,7 @@
   <description>
     AWS RoboMaker package containing ROS service definitions for service endpoints provided inside of an AWS RoboMaker simulation.
   </description>
-  <license>MIT</license>
+  <license>Apache 2.0</license>
   <author email="ros-contributions@amazon.com">AWS RoboMaker</author>
   <maintainer email="ros-contributions@amazon.com">AWS RoboMaker</maintainer>
   <buildtool_depend>catkin</buildtool_depend>
