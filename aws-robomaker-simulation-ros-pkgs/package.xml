@@ -3,11 +3,14 @@
   <name>aws-robomaker-simulation-ros-pkgs</name> <!-- This is a meta package! -->
   <version>1.1.0</version>
   <description>
-    AWS RoboMaker package for accessing the service
+    AWS RoboMaker package for accessing the simulation service.
   </description>
   <license>MIT</license>
   <author email="ros-contributions@amazon.com">AWS RoboMaker</author>
   <maintainer email="ros-contributions@amazon.com">AWS RoboMaker</maintainer>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>robomaker_simulation_msgs</build_depend>
+  <export>
+    <metapackage/>
+  </export>
 </package>

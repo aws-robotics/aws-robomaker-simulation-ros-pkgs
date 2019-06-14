@@ -1,21 +1,23 @@
-# Robomaker ROS Service
+# AWS RoboMaker ROS Message Service
 
-This package contains ROS service definitions for service endpoints provided
-inside of an AWS RoboMaker simulation.
+This package contains ROS service definitions for service endpoints provided inside of an AWS RoboMaker simulation.
 
 # Usage
 
-## SetTag
+## AddTags
 
 ### Python
 
 ```
+import rospy
+from robomaker_simulation_msgs.srv import AddTags
 
-```
-
-### C++
-
-```
+def add_tags(tags):
+    requestAddTags = rospy.ServiceProxy('/robomaker/job/add_tags', AddTags)
+    response = requestAddTags(tags)
+    if not response.success:
+        # AddTags failed
+        print response.message
 
 ```
 
@@ -25,20 +27,14 @@ inside of an AWS RoboMaker simulation.
 
 ```
 import rospy
-from robomaker_simulation_msgs.srv import *
+from robomaker_simulation_msgs.srv import RemoveTags
 
-request = CancelRequest()
-cancel_func = rospy.ServiceProxy('robomaker/job/cancel', )
-resp = cancel_func(request)
-if not resp.success:
-	# Cancellation failed
-	print resp.message
-
-```
-
-### C++
-
-```
+def remove_tags(tags):
+    requestRemoveTags = rospy.ServiceProxy('/robomaker/job/remove_tags', RemoveTags)
+    response = requestRemoveTags(tags)
+    if not response.success:
+        # RemoveTags failed
+        print response.message
 
 ```
 
@@ -48,33 +44,31 @@ if not resp.success:
 
 ```
 import rospy
-from robomaker_simulation_msgs.srv import *
+from robomaker_simulation_msgs.srv import ListTags
 
-
-
-def cancel():
-	request = CancelRequest()
-	cancel_func = rospy.ServiceProxy('robomaker/job/cancel', )
-	cancel_func(request)
-
-```
-
-### C++
-
-```
+def list_tags():
+    requestListTags = rospy.ServiceProxy('/robomaker/job/list_tags', ListTags)
+    response = requestListTags()
+    if response.success:
+        # ListTags succeeded
+        print response.tags
+    else:
+        # ListTags failed
+        print response.message
 
 ```
 
 ## CancelSimulation
+### Python
 
-```python
+```
 import rospy
-from robomaker_simulation_msgs.srv import *
+from robomaker_simulation_msgs.srv import Cancel
 
-
-
-def cancel():
-	request = CancelRequest()
-	cancel_func = rospy.ServiceProxy('robomaker/job/cancel', )
-	cancel_func(request)
+def cancel_job():
+    requestCancel = rospy.ServiceProxy('/robomaker/job/cancel', Cancel)
+    response = requestCancel()
+    if not response.success:
+        # Request cancel job failed
+        print response.message
 ```
