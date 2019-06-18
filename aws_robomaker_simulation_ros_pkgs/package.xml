@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>aws-robomaker-simulation-ros-pkgs</name> <!-- This is a meta package! -->
+  <name>aws_robomaker_simulation_ros_pkgs</name> <!-- This is a meta package! -->
   <version>1.1.0</version>
   <description>
     AWS RoboMaker package for accessing the simulation service.
