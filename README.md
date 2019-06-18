@@ -1,7 +1,7 @@
 # AWS RoboMaker Simulation ROS Packages
 
-ROS packages for use with an AWS RoboMaker simulation. 
-This package contains ROS service definitions for service endpoints provided inside of an AWS RoboMaker simulation.
+ROS packages for using with AWS RoboMaker Simulation. 
+Currently, we support robomaker_simulation_msgs. See [README](https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs/blob/master/robomaker_simulation_msgs/README.md)
 
 ## Documentation and Tutorials
 [AWS RoboMaker Documentation](https://docs.aws.amazon.com/robomaker)
