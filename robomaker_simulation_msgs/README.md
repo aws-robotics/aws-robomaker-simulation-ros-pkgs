@@ -8,7 +8,7 @@ This package contains ROS service definitions for service endpoints provided ins
 
 #### Python
 
-```
+```python
 import rospy
 from robomaker_simulation_msgs.srv import AddTags
 
@@ -30,7 +30,7 @@ def add_tags(tags):
 
 #### Python
 
-```
+```python
 import rospy
 from robomaker_simulation_msgs.srv import RemoveTags
 
@@ -52,7 +52,7 @@ def remove_tags(tags):
 
 #### Python
 
-```
+```python
 import rospy
 from robomaker_simulation_msgs.srv import ListTags
 
@@ -73,7 +73,7 @@ def list_tags():
 ### CancelSimulation
 #### Python
 
-```
+```python
 import rospy
 from robomaker_simulation_msgs.srv import Cancel
 
