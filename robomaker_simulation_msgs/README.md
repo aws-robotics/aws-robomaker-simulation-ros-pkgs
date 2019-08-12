@@ -2,6 +2,26 @@
 
 This package contains ROS service definitions for service endpoints provided inside of an AWS RoboMaker simulation.
 
+**Visit the [RoboMaker website](https://aws.amazon.com/robomaker/) to learn more about building intelligent robotic applications with Amazon Web Services.**
+
+## Install
+
+You will need the source code in your workspace. 
+
+Add a .rosinstall file with the contents below into your workspace folder then run `rosws update`:
+```
+- git: {local-name: src/aws-robomaker-simulation-ros-pkgs, uri: 'https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs.git', version: master}
+```
+
+And then build and bundle your workspace as per usual:
+```bash
+# build for ROS
+rosws update
+rosdep install --from-paths . --ignore-src -r -y
+colcon build
+colcon bundle
+```
+
 ## Usage
 
 You can tag, untag, and list tags in your simulation job from the ROS command-line or in your ROS application while it is running. See [AWS RoboMaker documentation](https://docs.aws.amazon.com/robomaker/latest/dg/simulation-job-tags.html). You must have an IAM role with the permissions below. Replace account# with your account number.
