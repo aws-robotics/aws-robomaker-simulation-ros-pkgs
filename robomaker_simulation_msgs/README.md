@@ -2,7 +2,7 @@
 
 This package contains ROS service definitions for service endpoints provided inside of an AWS RoboMaker simulation.
 
-**Visit the [RoboMaker website](https://aws.amazon.com/robomaker/) to learn more about building intelligent robotic applications with Amazon Web Services.**
+**Visit the [AWS RoboMaker website](https://aws.amazon.com/robomaker/) to learn more about building intelligent robotic applications with Amazon Web Services.**
 
 ## Install
 
