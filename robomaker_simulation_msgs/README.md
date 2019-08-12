@@ -4,6 +4,27 @@ This package contains ROS service definitions for service endpoints provided ins
 
 ## Usage
 
+You can tag, untag, and list tags in your simulation job from the ROS command-line or in your ROS application while it is running. See [AWS RoboMaker documentation](https://docs.aws.amazon.com/robomaker/latest/dg/simulation-job-tags.html). You must have an IAM role with the permissions below. Replace account# with your account number.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "robomaker:TagResource",
+                "robomaker:UntagResource",
+                "robomaker:ListTagsForResource",
+            ],
+            "Resource": [
+                "arn:aws:robomaker:*:account#:simulation-job/*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+```
+
 ### AddTags
 
 #### Python
@@ -71,6 +92,27 @@ def list_tags():
 ```
 
 ### CancelSimulation
+
+You can cancel your simulation job from the ROS command-line or in your ROS application while it is running. See [AWS RoboMaker documentation](https://docs.aws.amazon.com/robomaker/latest/dg/simulation-job-playback-rosbags.html#simulation-job-playback-rosbags-cancel). You must have an IAM role with the permissions below. Replace account# with your account number. 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "robomaker:CancelSimulationJob"
+            ],
+            "Resource": [
+                "arn:aws:robomaker:*:account#:simulation-job/*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+```
+
+
 #### Python
 
 ```python
