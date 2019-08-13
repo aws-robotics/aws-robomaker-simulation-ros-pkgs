@@ -8,12 +8,20 @@ This package contains ROS service definitions for service endpoints provided ins
 
 You will need the source code in your workspace. 
 
-Add a .rosinstall file with the contents below into your workspace folder then run `rosws update`:
+1. Add a .rosinstall file with the contents below into your workspace folder then run `rosws update`:
 ```
 - git: {local-name: src/aws-robomaker-simulation-ros-pkgs, uri: 'https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs.git', version: master}
 ```
 
-And then build and bundle your workspace as per usual:
+2. Add a dependency to your package.xml to access the service types (.srv):
+```
+<package>
+   ...
+   <depend>aws_robomaker_simulation_ros_pkgs</depend>
+</package>
+```
+
+3. Follow the Python usage below and then build and bundle your workspace as per usual:
 ```bash
 # build for ROS
 rosws update
