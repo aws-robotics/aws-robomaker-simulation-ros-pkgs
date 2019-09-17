@@ -1,4 +1,4 @@
-# Robomaker ROS Service
+# AWS Robomaker ROS Service
 
 This package contains ROS service definitions for service endpoints provided
 inside of an AWS RoboMaker simulation.
