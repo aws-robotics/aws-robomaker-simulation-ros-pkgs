@@ -42,7 +42,7 @@ You can tag, untag, and list tags in your simulation job from the ROS command-li
             "Action": [
                 "robomaker:TagResource",
                 "robomaker:UntagResource",
-                "robomaker:ListTagsForResource",
+                "robomaker:ListTagsForResource"
             ],
             "Resource": [
                 "arn:aws:robomaker:*:account#:simulation-job/*"
@@ -59,6 +59,7 @@ You can tag, untag, and list tags in your simulation job from the ROS command-li
 
 ```python
 import rospy
+from robomaker_simulation_msgs.msg import Tag
 from robomaker_simulation_msgs.srv import AddTags
 
 def add_tags_to_my_sim():
