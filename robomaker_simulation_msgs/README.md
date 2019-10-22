@@ -18,7 +18,7 @@ You can tag, untag, and list tags in your simulation job from the ROS command-li
                 "robomaker:ListTagsForResource"
             ],
             "Resource": [
-                "arn:aws:robomaker:*:account#:simulation-job/*"
+                "arn:aws:robomaker:*:<account#>:simulation-job/*"
             ],
             "Effect": "Allow"
         }
@@ -143,7 +143,7 @@ You can cancel your simulation job from the ROS command-line or in your ROS appl
                 "robomaker:CancelSimulationJob"
             ],
             "Resource": [
-                "arn:aws:robomaker:*:account#:simulation-job/*"
+                "arn:aws:robomaker:*:<account#>:simulation-job/*"
             ],
             "Effect": "Allow"
         }
