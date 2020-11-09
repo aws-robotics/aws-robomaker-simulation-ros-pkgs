@@ -2,8 +2,8 @@
 Changelog for package robomaker_simulation_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.1 (2020-11-09)
+------------------
 * Add newlines to CMakeLists (`#10 <https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs/issues/10>`_) (`#12 <https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs/issues/12>`_)
 * Merge pull request `#9 <https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs/issues/9>`_ from aws-robotics/kinetic-dep
   Remove rospy from CMakeLists.txt
