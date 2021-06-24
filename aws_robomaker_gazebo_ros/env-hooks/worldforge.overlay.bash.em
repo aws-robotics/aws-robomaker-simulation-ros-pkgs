@@ -8,7 +8,7 @@ if [[ -n ${AWS_ROBOMAKER_WORLDFORGE_WORLD_PACKAGE_OVERRIDE} ]]; then
     # buffer and reset _colcon_prefix_sh_source_script as sourcing setup.sh will unset this function variable
     local COLCON_PREFIX_SH_SOURCE_BUFFER_FN=$(declare -f $_colcon_prefix_sh_source_script)
     BUNDLE_CURRENT_PREFIX=${AWS_ROBOMAKER_WORLDFORGE_SETUP_OVERRIDE:-/opt/robomaker/worldforge/$ROS_DISTRO}
-    . ${BUNDLE_CURRENT_PREFIX}/setup.sh
+    source ${BUNDLE_CURRENT_PREFIX}/setup.sh
     unset BUNDLE_CURRENT_PREFIX
     eval "$COLCON_PREFIX_SH_SOURCE_BUFFER_FN"
 fi
