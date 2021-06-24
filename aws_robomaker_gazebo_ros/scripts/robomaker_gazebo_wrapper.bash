@@ -12,9 +12,9 @@ if [[ -n ${AWS_ROBOMAKER_WORLDFORGE_WORLD_PACKAGE_OVERRIDE} ]]; then
     worldforge_world_pkg_count=`echo $ROS_PACKAGE_PATH | grep -o aws_robomaker_worldforge_worlds | wc -l`
     if [ "$worldforge_world_pkg_count" -gt "1" ]; then
         CONFLICTING_WORLD_WARNING="[Wrn] A AWS Robomaker worldforge world exists in your ROS environment. \
-        There is no guarantee that the worldforge world referenced via world ARN will be used \
-        during the execution of the simulation job. This message can be safely ignored if you \
-        are using a bundle to create the simulation job."
+        There is no guarantee that the worldforge world referenced via world ARN will be used during the \
+        execution of the simulation job. Please re-export your AWS RoboMaker worldforge world(s) to resolve \
+        this issue. This message can be safely ignored if you are using a bundle to create the simulation job."
         echo $CONFLICTING_WORLD_WARNING
     fi
     world_pkg_path=`rospack find aws_robomaker_worldforge_worlds`
