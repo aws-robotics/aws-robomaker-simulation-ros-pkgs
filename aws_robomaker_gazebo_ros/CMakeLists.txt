@@ -3,7 +3,7 @@ project(aws_robomaker_gazebo_ros)
 
 find_package(ament_cmake REQUIRED)
 
-ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/worldforge.overlay.sh")
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/worldforge.overlay.sh.in")
 
 # Install Gazebo launch files
 install(
