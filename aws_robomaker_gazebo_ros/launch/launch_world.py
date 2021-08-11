@@ -24,11 +24,10 @@ def generate_launch_description():
         # check if worldforge world(s) exist in the customer workspace
         worldforge_world_pkg_count = os.getenv('AMENT_PREFIX_PATH','').count('aws_robomaker_worldforge_worlds')
         if (worldforge_world_pkg_count > 1):
-            print("[Wrn] A AWS Robomaker worldforge world exists in your ROS environment. "
-                "There is no guarantee that the worldforge world referenced via world ARN "
-                "will be used during the execution of the simulation job. Please re-export "
-                "your AWS RoboMaker worldforge world(s) to resolve this issue. This message "
-                "can be safely ignored if you are using a bundle to create the simulation job.")
+            print("[Wrn] The AWS Robomaker worldforge world referenced in your worldConfig might not be used in "
+                "the simulation job because it conflicts with a AWS Robomaker worldforge world from your workspace. "
+                "Please re-export your AWS RoboMaker worldforge world(s) to resolve this issue. This message can "
+                "be safely ignored if you are using a bundle to create the simulation job.")
         world_pkg_path = get_package_share_directory('aws_robomaker_worldforge_worlds')
         world_sdf_path_override = glob.glob(world_pkg_path + '/worlds' + '/**/generation_*_world_*.world', recursive = True)
 
@@ -69,7 +68,6 @@ def generate_launch_description():
         }.items()
     )
 
-
     ld_args = [
         DeclareLaunchArgument(
             'world_name',
@@ -78,7 +76,7 @@ def generate_launch_description():
             description='Path to the world file with respect to GAZEBO_RESOURCE_PATH env variable.'
         ),
         DeclareLaunchArgument(
-            'pause', default_value='false'
+            'pause', default_value='false',
             description='Pause gazebo after loading the world if set to true'
         ),
         DeclareLaunchArgument(
