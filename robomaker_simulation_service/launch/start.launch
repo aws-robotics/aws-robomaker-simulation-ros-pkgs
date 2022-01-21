@@ -1,0 +1,3 @@
+<launch>
+    <node ns="robomaker" pkg="robomaker_simulation_service" type="robomaker_server" name="srv" output="screen" required="true"/>
+</launch>
