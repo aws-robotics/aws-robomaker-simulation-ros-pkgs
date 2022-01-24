@@ -19,6 +19,11 @@ As an executable:
 ./robomaker_server
 ```
 
+Make sure to set the required environment variable based on the region you are running in:
+```
+AWS_REGION=us-west-2
+```
+
 ### Covered APIs:
 
 Cancel: https://docs.aws.amazon.com/robomaker/latest/dg/API_CancelSimulationJob.html

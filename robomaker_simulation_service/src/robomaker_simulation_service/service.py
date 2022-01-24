@@ -6,7 +6,7 @@ from robomaker_simulation_msgs.msg import Tag
 from robomaker_client import RobomakerClient
 
 JOB_ARN = os.environ.get('AWS_ROBOMAKER_SIMULATION_JOB_ARN')
-ROBOMAKER_CLIENT = RobomakerClient(os.environ.get('AWS_ROBOMAKER_REGION'))
+ROBOMAKER_CLIENT = RobomakerClient(os.environ.get('AWS_REGION'))
 
 
 def on_add_tags(request):
