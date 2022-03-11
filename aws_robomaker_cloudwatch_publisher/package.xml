@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>aws_robomaker_cloudwatch_publisher</name>
+  <version>1.0.0</version>
+  <description>
+    AWS RoboMaker package containing utilities and nodes that facilitate pushing data and metrics to CloudWatch.
+  </description>
+  <license>Apache 2.0</license>
+  <author email="ros-contributions@amazon.com">AWS RoboMaker</author>
+  <maintainer email="ros-contributions@amazon.com">AWS RoboMaker</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rostest</build_depend>
+  <exec_depend>gazebo_msgs</exec_depend>
+
+  <export>
+    <build_type>catkin</build_type>
+  </export>
+</package>

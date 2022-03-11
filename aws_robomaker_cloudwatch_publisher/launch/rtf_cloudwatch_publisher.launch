@@ -1,0 +1,14 @@
+<launch>
+    <arg name="rate" default="1" />
+    <arg name="gazebo_perf_metrics_topic" default="/gazebo/aws/perf_metrics" />
+    <arg name="gazebo_world_stats_topic" default="/gazebo/default/world_stats" />
+
+    <include file="$(find aws_robomaker_gazebo_bridge)/launch/perf_metrics_bridge.launch">
+        <param name="gazebo_perf_metrics_topic" value="$(arg gazebo_perf_metrics_topic)" />
+        <param name="gazebo_world_stats_topic" value="$(arg gazebo_world_stats_topic)" />
+    </include>
+    <node name="cloudwatch_publisher" pkg="aws_robomaker_cloudwatch_publisher" type="rtf_cloudwatch_publisher.py">
+        <param name="publish_rate_frequency" value="$(arg rate)" />
+        <param name="gazebo_topic" value="$(arg gazebo_perf_metrics_topic)" />
+    </node>
+</launch>
