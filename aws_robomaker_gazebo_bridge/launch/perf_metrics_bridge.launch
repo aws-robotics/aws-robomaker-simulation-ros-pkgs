@@ -1,0 +1,9 @@
+<launch>
+    <arg name="gazebo_perf_metrics_topic" default="/gazebo/aws/perf_metrics" />
+    <arg name="gazebo_world_stats_topic" default="/gazebo/default/world_stats" />
+
+    <node name="aws_perf_metrics_bridge" pkg="aws_robomaker_gazebo_bridge" type="perf_metrics_bridge">
+        <param name="gazebo_perf_metrics_topic" value="$(arg gazebo_perf_metrics_topic)" />
+        <param name="gazebo_world_stats_topic" value="$(arg gazebo_world_stats_topic)" />
+    </node>
+</launch>
