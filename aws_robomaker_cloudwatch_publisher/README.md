@@ -12,7 +12,13 @@ cd <workspace_dir>/src
 git clone https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs.git
 ```
 
-2. Include the required launch file from the package into yours:
+2. Install the required Python dependencies:
+```bash
+cd <workspace_dir>/src/aws-robomaker-simulation-ros-pkgs/aws_robomaker_cloudwatch_publisher
+pip install -r requirements.txt
+```
+
+3. Include the required launch file from the package into yours:
 ```xml
 <include file="$(find aws_robomaker_cloudwatch_publisher)/launch/rtf_cloudwatch_publisher.launch">
     <arg name="publish_rate_frequency" value="$(arg rate)"/>
@@ -20,7 +26,7 @@ git clone https://github.com/aws-robotics/aws-robomaker-simulation-ros-pkgs.git
 </include>
 ```
 
-3. Build your workspace as you normally would
+4. Build your workspace as you normally would
 ```bash
 cd <workspace_dir>
 catkin_make
