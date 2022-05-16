@@ -7,7 +7,7 @@ import rospy
 
 class RTFCloudWatchPublisher(object):
     def __init__(self, publish_rate_frequency=1):
-        rospy.init_node("RFTCloudWatchPublisher")
+        rospy.init_node("RTFCloudWatchPublisher")
         self._freq = rospy.get_param("~publish_rate_frequency")
         self._publisher = CloudWatchPublisher("RealTimeFactor")
 
